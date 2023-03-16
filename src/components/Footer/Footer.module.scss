@@ -1,0 +1,92 @@
+@import '../../styles/components/all';
+
+.footer {
+	margin-top: 320px;
+	background-color: $colorBlack;
+	color: $colorWhite;
+}
+
+.containerFooter {
+	width: 100%;
+	max-width: 812px;
+	margin: 0 auto;
+}
+
+.inner {
+	padding: 120px 0;
+	height: 774px;
+	text-align: center;
+}
+
+.title {
+	font-size: 38px;
+	font-weight: 600;
+	line-height: 1.2;
+	color: $colorWhite;
+}
+
+.paragraph {
+	display: block;
+	padding: 40px 0;
+
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.2;
+	color: $colorWhite;
+}
+
+.form {
+	display: flex;
+	justify-content: space-around;
+}
+
+.notice {
+	padding-top: 31px;
+
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.2;
+	opacity: .4;
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: 800;
+	line-height: 1.2;
+	color: $colorWhite;
+}
+
+.nav {
+	padding: 75px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.navLink {
+	text-align: center;
+	margin-left: 68px;
+
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 1.2;
+	color: $colorWhite;
+
+	transition: all .2s linear;
+
+	&:hover {
+		opacity: 0.7;
+	}
+
+	&:active {
+		transform: scale(0.98);
+	}
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	&.active {
+		font-weight: 700;
+	}
+}

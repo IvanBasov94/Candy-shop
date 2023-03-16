@@ -1,0 +1,73 @@
+@import '../../../styles/components/all';
+
+
+.myInput {
+	display: inline-block;
+	height: 81px;
+	padding: 0 20px;
+
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 1.2;
+
+	border: none;
+	border-radius: 20px;
+	background: transparent;
+
+	&:focus,
+	&:hover {
+		box-shadow: 0 0 5px 2px $colorDarkGray;
+	}
+
+	&.small {
+		width: 270px;
+	}
+
+	&.medium {
+		width: 398px;
+	}
+
+	&.large {
+		width: 483px;
+	}
+
+	&.extraLarge {
+		width: 618px;
+	}
+
+	&.white {
+		border: 3px solid $colorBlack;
+		color: $colorBlack;
+
+		&::placeholder {
+			color: $colorBlack;
+			opacity: 1;
+		}
+
+		&::-ms-input-placeholder {
+			color: $colorBlack;
+		}
+
+		&:-ms-input-placeholder {
+			color: $colorBlack;
+		}
+	}
+
+	&.black {
+		@include input-colorWhite;
+		border: 3px solid $colorWhite;
+
+		&::placeholder {
+			@include input-colorWhite;
+			opacity: 1;
+		}
+
+		&::-ms-input-placeholder {
+			@include input-colorWhite;
+		}
+
+		&:-ms-input-placeholder {
+			@include input-colorWhite;
+		}
+	}
+}

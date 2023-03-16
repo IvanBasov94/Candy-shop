@@ -1,0 +1,55 @@
+@import '../../styles/components/all';
+
+.main {
+	color: $colorBlack;
+	background-color: $colorWhite;
+}
+
+.product {
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: top;
+}
+
+.image {
+	width: 50%;
+	width: 535px;
+
+	img {
+		width: 535px;
+		height: 594px;
+		border-radius: 20px;
+
+		object-fit: cover;
+	}
+}
+
+.info {
+	width: 50%;
+	max-width: 535px;
+}
+
+.title {
+	padding-bottom: 30px;
+
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+.options {
+	padding-bottom: 30px;
+
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.description {
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 1.2;
+
+	padding-bottom: 30px;
+}

@@ -1,0 +1,52 @@
+@import '../../../styles/components/all';
+
+
+.myBtn {
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+
+	font-size: 22px;
+	line-height: 1.2;
+
+	border: none;
+	border-radius: 20px;
+
+	transition: opacity .2s linear;
+
+	&.pink {
+		font-weight: 500;
+		color: $colorWhite;
+		background-color: $colorPink;
+	}
+
+	&.white {
+		font-weight: 700;
+		color: $colorBlack;
+		background-color: $colorWhite;
+	}
+
+	&.small {
+		width: 173px;
+		height: 81px;
+	}
+
+	&.medium {
+		width: 217px;
+		height: 81px;
+	}
+
+	&.large {
+		width: 320px;
+		height: 81px;
+	}
+
+	&:hover {
+		opacity: .7;
+	}
+
+	&:active {
+		transform: scale(0.98);
+	}
+}

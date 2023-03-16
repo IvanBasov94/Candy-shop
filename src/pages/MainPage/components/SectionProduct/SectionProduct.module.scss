@@ -1,0 +1,19 @@
+@import '../../../../styles/components/all';
+
+.section {
+	padding-top: 62px;
+}
+
+.products {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+	color: $colorBlack;
+}
+
+.title {
+	@include h2-title;
+
+	margin-bottom: 40px;
+}

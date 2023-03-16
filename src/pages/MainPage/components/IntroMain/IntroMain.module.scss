@@ -1,0 +1,26 @@
+@import '../../../../styles/components/all';
+
+.intro {
+	position: relative;
+	width: 100%;
+	height: 422px;
+	margin-bottom: 70px;
+
+	background-image: url('../../../../assets//img/intro.jpg');
+	background-size: cover;
+
+	border-radius: 20px;
+}
+
+.title {
+	width: 558px;
+	height: 118px;
+	position: absolute;
+	top: 63px;
+	left: 46px;
+
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 1.2;
+	color: $colorBrown;
+}

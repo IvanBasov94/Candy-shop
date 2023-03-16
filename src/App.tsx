@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import AboutPage from './pages/AboutPage';
+import AutorizationPage from './pages/AutorizationPage';
+import BasketPage from './pages/BasketPage';
+import ContactsPage from './pages/ContactsPage';
+import HelpPage from './pages/HelpPage';
+import MainPage from './pages/MainPage';
+import ProductPage from './pages/ProductPage';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+import { products } from './assets/data/products';
+
+
+const App: FC = () => {
+	return (
+		<>
+			<Header />
+			<Routes>
+				<Route path='/' element={<MainPage products={products} />} />
+				<Route path='/help' element={<HelpPage />} />
+				<Route path='/about' element={<AboutPage />} />
+				<Route path='/contacts' element={<ContactsPage />} />
+				<Route path='/autorization' element={<AutorizationPage />} />
+				<Route path='/basket' element={<BasketPage />} />
+				<Route path='/product/:id' element={<ProductPage />} />
+			</Routes >
+			<Footer />
+		</>
+	);
 }
 
 export default App;
