@@ -6,13 +6,7 @@
 	height: 81px;
 	padding: 0 20px;
 
-	font-size: 22px;
-	font-weight: 300;
-	line-height: 1.2;
-
-	border: none;
-	border-radius: 20px;
-	background: transparent;
+	@include input-params;
 
 	&:focus,
 	&:hover {
@@ -21,6 +15,7 @@
 
 	&.small {
 		width: 270px;
+		height: 54px;
 	}
 
 	&.medium {
@@ -33,6 +28,7 @@
 
 	&.extraLarge {
 		width: 618px;
+		margin-bottom: 15px;
 	}
 
 	&.white {

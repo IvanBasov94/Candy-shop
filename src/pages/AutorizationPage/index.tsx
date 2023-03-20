@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import MyInput from "../../components/UI/Input";
+import MyInput from "../../components/UI/MyInput";
 
 const AutorizationPage: FC = () => {
 	return (

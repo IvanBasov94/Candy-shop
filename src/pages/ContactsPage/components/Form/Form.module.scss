@@ -1,0 +1,52 @@
+@import '../../../../styles/components/all';
+
+.form {
+	width: 618px;
+	text-align: center;
+	margin-left: 42px;
+}
+
+.textArea {
+	display: inline-block;
+	width: 618px;
+	height: 196px;
+	padding: 20px;
+	margin-bottom: 15px;
+
+	@include input-params;
+
+	border: 3px solid $colorBlack;
+	color: $colorBlack;
+
+	&:focus,
+	&:hover {
+		box-shadow: 0 0 5px 2px $colorDarkGray;
+	}
+
+	&::placeholder {
+		color: $colorBlack;
+		opacity: 1;
+	}
+
+	&::-ms-input-placeholder {
+		color: $colorBlack;
+	}
+
+	&:-ms-input-placeholder {
+		color: $colorBlack;
+	}
+}
+
+.submitBtn {
+	text-align: left;
+}
+
+.condition {
+	margin-top: 29px;
+	text-align: justify;
+
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.2;
+	opacity: .4;
+}

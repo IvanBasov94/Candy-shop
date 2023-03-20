@@ -1,1 +1,31 @@
 @import '../../styles/components/all';
+
+.title {
+	@include h2-title;
+
+	margin-bottom: 77px;
+}
+
+.total {
+	text-align: right;
+}
+
+.promoСode {
+	padding: 55px 0 80px;
+}
+
+.text {
+	display: inline-block;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 1.2;
+	padding-right: 15px;
+}
+
+.summary {
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 1.2;
+
+	padding-bottom: 25px;
+}

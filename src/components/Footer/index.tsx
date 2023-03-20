@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { NavLink } from 'react-router-dom';
 
-import MyInput from "../UI/Input";
+import MyInput from "../UI/MyInput";
 import MyButton from "../UI/MyButton";
 
 import styles from './Footer.module.scss';
