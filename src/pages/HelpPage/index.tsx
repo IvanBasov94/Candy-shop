@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useState, useRef } from "react";
 
 import SectionHelp from "./components/SectionHelp";
 import MyButton from "../../components/UI/MyButton";
@@ -23,6 +23,12 @@ const HelpPage: FC = () => {
 		}));
 	};
 
+	const buyRef = useRef<HTMLElement>(null);
+	const deliveryRef = useRef<HTMLElement>(null);
+
+	const executeBuyScroll = () => buyRef.current?.scrollIntoView();
+	const executeDeliveryScroll = () => deliveryRef.current?.scrollIntoView()
+
 	return (
 		<main className={styles.main}>
 			<div className={styles.container}>
@@ -33,24 +39,30 @@ const HelpPage: FC = () => {
 						size='small'
 						color='pink'
 						text='Покупка'
+						onClick={executeBuyScroll}
 					/>
 					<MyButton
 						type='button'
 						size='large'
 						color='pink'
 						text='Оплата и доставка'
+						onClick={executeDeliveryScroll}
 					/>
 				</div>
-				<SectionHelp
-					infoHelp={infoHelp}
-					category='Покупка'
-					changeVisible={changeVisible}
-				/>
-				<SectionHelp
-					infoHelp={infoHelp}
-					category='Оплата и доставка'
-					changeVisible={changeVisible}
-				/>
+				<section ref={buyRef}>
+					<SectionHelp
+						infoHelp={infoHelp}
+						category='Покупка'
+						changeVisible={changeVisible}
+					/>
+				</section>
+				<section ref={deliveryRef}>
+					<SectionHelp
+						infoHelp={infoHelp}
+						category='Оплата и доставка'
+						changeVisible={changeVisible}
+					/>
+				</section>
 			</div>
 		</main>
 	);

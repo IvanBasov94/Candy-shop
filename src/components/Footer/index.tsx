@@ -22,6 +22,7 @@ const Footer: FC = () => {
 							type='email'
 							size='large'
 							color='black'
+							name='email'
 						/>
 						<MyButton
 							type='submit'

@@ -1,0 +1,32 @@
+@import '../../../../styles/components/all';
+
+.title {
+	@include h2-title;
+
+	padding-bottom: 46px;
+}
+
+.titleError {
+	@include h2-title;
+
+	padding-bottom: 15px;
+}
+
+.registration {
+	width: 50%;
+}
+
+.text {
+	padding-bottom: 15px;
+
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 1.2;
+}
+
+.error {
+	font-size: 18px;
+	font-weight: 500;
+	color: $colorPink;
+	padding-bottom: 10px;
+}

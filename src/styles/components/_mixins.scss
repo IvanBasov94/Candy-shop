@@ -1,9 +1,9 @@
 @import '../components/colors';
 
 @mixin h2-title {
-	font-size: 36px;
+	font-size: 48px;
 	font-weight: 600;
-	line-height: 1.2;
+	line-height: 1.23;
 	color: $colorBlack;
 }
 
@@ -12,7 +12,7 @@
 }
 
 @mixin input-params {
-	font-size: 16px;
+	font-size: 22px;
 	font-weight: 300;
 	line-height: 1.2;
 

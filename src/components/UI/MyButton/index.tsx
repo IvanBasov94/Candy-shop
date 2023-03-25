@@ -7,6 +7,7 @@ interface IMyButtonProps {
 	size: string,
 	color: string,
 	text: string,
+	onClick?: () => void,
 };
 
 const MyButton: FC<IMyButtonProps> = ({
@@ -14,10 +15,15 @@ const MyButton: FC<IMyButtonProps> = ({
 	size,
 	color,
 	text,
+	onClick,
 }) => {
 
 	return (
-		<button className={`myBtn ${size} ${color}`} type={type}>
+		<button
+			className={`myBtn ${size} ${color}`}
+			type={type}
+			onClick={onClick}
+		>
 			{text}
 		</button>
 	);

@@ -18,7 +18,7 @@ const SectionHelp: FC<ISectionHelpProps> = ({
 	changeVisible,
 }) => {
 	return (
-		<section className={styles.section}>
+		<div className={styles.section}>
 			<h3 className={styles.title}>{category}</h3>
 			<div className={styles.instructions}>
 				{
@@ -33,7 +33,7 @@ const SectionHelp: FC<ISectionHelpProps> = ({
 					})
 				}
 			</div>
-		</section>
+		</div>
 	);
 };
 

@@ -8,12 +8,15 @@ import { products } from "../../assets/data/products";
 
 import styles from './ProductPage.module.scss';
 
-
 type Params = {
 	id: string;
 };
 
-const ProductPage: FC = () => {
+interface IProductPageProps {
+	addBasketProduct: (id: number) => void,
+};
+
+const ProductPage: FC<IProductPageProps> = ({ addBasketProduct }) => {
 
 	const { id } = useParams<Params>();
 
@@ -49,6 +52,7 @@ const ProductPage: FC = () => {
 							size='small'
 							color='pink'
 							text='Заказать'
+							onClick={() => addBasketProduct(Number(id))}
 						/>
 					</div>
 				</div>

@@ -18,6 +18,7 @@ const Form: FC = () => {
 							type={type.type}
 							size={type.size}
 							color={type.color}
+							name='form'
 						/>
 					))
 				}

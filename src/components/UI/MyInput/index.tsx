@@ -7,6 +7,9 @@ interface IMyInputProps {
 	type: string,
 	size: string,
 	color: string,
+	name: string,
+	value?: string,
+	onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void,
 };
 
 const MyInput: FC<IMyInputProps> = ({
@@ -14,6 +17,8 @@ const MyInput: FC<IMyInputProps> = ({
 	type,
 	size,
 	color,
+	value,
+	onChange,
 }) => {
 
 	return (
@@ -21,6 +26,8 @@ const MyInput: FC<IMyInputProps> = ({
 			type={type}
 			placeholder={text}
 			className={`myInput ${size} ${color}`}
+			value={value}
+			onChange={onChange}
 		/>
 	);
 };

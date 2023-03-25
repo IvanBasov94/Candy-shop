@@ -1,0 +1,72 @@
+@import '../../../../styles/components/all';
+
+.title {
+	@include h2-title;
+
+	padding-bottom: 46px;
+}
+
+.titleError {
+	@include h2-title;
+
+	padding-bottom: 15px;
+}
+
+.login {
+	width: 50%;
+
+	margin-right: 174px;
+}
+
+.options {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 95px;
+}
+
+.item {
+	margin-right: 71px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.checkbox {
+	margin-left: 8px;
+	display: inline-block;
+	transform: scale(2);
+}
+
+.text {
+	padding-left: 20px;
+	display: inline-block;
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 1.2;
+}
+
+.link {
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 1.2;
+	text-decoration: underline;
+	color: $colorBlack;
+
+	transition: all .2s linear;
+
+	&:hover {
+		opacity: 0.7;
+	}
+
+	&:active {
+		transform: scale(0.98);
+	}
+}
+
+.error {
+	font-size: 18px;
+	font-weight: 500;
+	color: $colorPink;
+	padding-bottom: 10px;
+}

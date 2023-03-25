@@ -2,12 +2,17 @@ import { FC } from "react";
 
 import styles from './ProductItem.module.scss';
 import { IProduct } from "../../../../types/types";
+import crossDelete from '../../../../assets/img/crossDelete.png';
 
 interface IProductItemProps {
 	product: IProduct,
+	deleteProduct: (id: number) => void,
 };
 
-const ProductItem: FC<IProductItemProps> = ({ product }) => {
+const ProductItem: FC<IProductItemProps> = ({
+	product,
+	deleteProduct
+}) => {
 	return (
 		<section className={styles.product}>
 			<div className={styles.item}>
@@ -19,7 +24,7 @@ const ProductItem: FC<IProductItemProps> = ({ product }) => {
 			</div>
 			<div className={styles.item}>
 				<h4 className={styles.title}>{product.title}</h4>
-				<ul>
+				<ul className={styles.infoProduct}>
 					<li>Покрытие кремом: {product.creamСoverage}</li>
 					<li>Подтёки: {product.defect}</li>
 					<li>Дата готовности: {product.date}</li>
@@ -32,7 +37,19 @@ const ProductItem: FC<IProductItemProps> = ({ product }) => {
 				<span className={styles.price}>{product.price} руб.</span>
 			</div>
 			<div className={styles.item}>
-				<button className={styles.btnDelete}>×</button>
+				<span className={styles.count}>10 шт.</span>
+			</div>
+			<div className={styles.item}>
+				<button
+					className={styles.btnDelete}
+					onClick={() => deleteProduct(product.id)}
+				>
+					<img
+						className={styles.btnDeleteImg}
+						src={crossDelete}
+						alt="crossDelete"
+					/>
+				</button>
 			</div>
 		</section>
 	);

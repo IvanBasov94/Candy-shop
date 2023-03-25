@@ -14,6 +14,10 @@ export interface IProduct {
 	berryDecoration: string,
 };
 
+export interface IBasketProduct extends IProduct {
+	idBasket: number,
+};
+
 export interface IInfoHelp {
 	id: number,
 	category: string,
@@ -28,4 +32,10 @@ export interface ITypeInput {
 	type: string,
 	size: string,
 	color: string,
+};
+
+export interface IUser {
+	id: number,
+	login: string,
+	password: string,
 };

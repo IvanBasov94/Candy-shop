@@ -2,21 +2,28 @@ import { FC } from "react";
 
 import ProductItem from "../ProductItem";
 
-import styles from './ProductList.module.scss';
 import { IProduct } from "../../../../types/types";
 
+
 interface IProductListProps {
-	products: IProduct[],
+	basketProducts: IProduct[],
+	deleteProduct: (id: number) => void
 };
 
-const ProductList: FC<IProductListProps> = ({ products }) => {
+
+const ProductList: FC<IProductListProps> = ({
+	basketProducts,
+	deleteProduct
+}) => {
+
 	return (
 		<div>
 			{
-				products.map(product => (
+				basketProducts.map(product => (
 					<ProductItem
 						key={product.id}
 						product={product}
+						deleteProduct={deleteProduct}
 					/>
 				))
 			}

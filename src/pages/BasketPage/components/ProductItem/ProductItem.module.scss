@@ -3,7 +3,7 @@
 .product {
 	display: flex;
 	align-items: center;
-	padding-bottom: 20px;
+	padding-bottom: 30px;
 }
 
 .item {
@@ -24,11 +24,56 @@
 }
 
 .title {
-	width: 661px;
+	width: 550px;
+	padding-bottom: 20px;
+
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+.infoProduct {
+	list-style-type: none;
+
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 1.2;
 }
 
 
-.price {
+.price,
+.count {
 	display: inline-block;
-	width: 163px;
+	width: 150px;
+
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+.count {
+	width: 70px;
+}
+
+.btnDelete {
+	width: 20px;
+	height: 20px;
+
+	border: none;
+	background: transparent;
+}
+
+.btnDeleteImg {
+	width: 100%;
+	cursor: pointer;
+
+	transition: all .2s linear;
+
+	&:hover {
+		opacity: 0.7;
+	}
+
+	&:active {
+		transform: scale(0.98);
+	}
 }
