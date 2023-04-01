@@ -2,28 +2,32 @@ import { FC } from "react";
 
 import ProductItem from "../ProductItem";
 
-import { IProduct } from "../../../../types/types";
+import { IBasketProduct } from "../../../../types/types";
 
 
 interface IProductListProps {
-	basketProducts: IProduct[],
-	deleteProduct: (id: number) => void
+	basketProducts: IBasketProduct[],
+	deleteProduct: (id: number) => void,
+	incrementCountProuduct: (id: number) => void,
+	decrementCountProuduct: (id: number) => void,
 };
-
 
 const ProductList: FC<IProductListProps> = ({
 	basketProducts,
-	deleteProduct
+	deleteProduct,
+	incrementCountProuduct,
+	decrementCountProuduct,
 }) => {
-
 	return (
 		<div>
 			{
 				basketProducts.map(product => (
 					<ProductItem
-						key={product.id}
+						key={product.idBasketProduct}
 						product={product}
 						deleteProduct={deleteProduct}
+						incrementCountProuduct={incrementCountProuduct}
+						decrementCountProuduct={decrementCountProuduct}
 					/>
 				))
 			}

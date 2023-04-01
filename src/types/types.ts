@@ -15,7 +15,8 @@ export interface IProduct {
 };
 
 export interface IBasketProduct extends IProduct {
-	idBasket: number,
+	idBasketProduct: number,
+	count: number,
 };
 
 export interface IInfoHelp {

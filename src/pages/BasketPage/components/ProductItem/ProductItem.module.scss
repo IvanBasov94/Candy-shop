@@ -24,7 +24,7 @@
 }
 
 .title {
-	width: 550px;
+	width: 500px;
 	padding-bottom: 20px;
 
 	font-size: 30px;
@@ -45,6 +45,7 @@
 .count {
 	display: inline-block;
 	width: 150px;
+	text-align: center;
 
 	font-size: 24px;
 	font-weight: 600;
@@ -52,18 +53,22 @@
 }
 
 .count {
-	width: 70px;
+	width: 80px;
 }
 
-.btnDelete {
+.btnDelete,
+.btnCount {
 	width: 20px;
 	height: 20px;
 
 	border: none;
 	background: transparent;
+
+	transition: all .2s linear;
 }
 
-.btnDeleteImg {
+.btnDeleteImg,
+.btnCountImg {
 	width: 100%;
 	cursor: pointer;
 

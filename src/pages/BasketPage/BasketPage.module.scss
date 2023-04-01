@@ -22,6 +22,10 @@
 	padding-right: 15px;
 }
 
+.successOrder {
+	@include popup-text;
+}
+
 .summary {
 	font-size: 30px;
 	font-weight: 600;

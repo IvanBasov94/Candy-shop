@@ -47,13 +47,15 @@ const ProductPage: FC<IProductPageProps> = ({ addBasketProduct }) => {
 						<p className={styles.description}>
 							{product.desctiption}
 						</p>
-						<MyButton
-							type='button'
-							size='small'
-							color='pink'
-							text='Заказать'
-							onClick={() => addBasketProduct(Number(id))}
-						/>
+						<NavLink to={'/'}>
+							<MyButton
+								type='button'
+								size='small'
+								color='pink'
+								text='Заказать'
+								onClick={() => addBasketProduct(Number(id))}
+							/>
+						</NavLink>
 					</div>
 				</div>
 			</div>

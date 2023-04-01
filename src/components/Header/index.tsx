@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 
 import styles from './Header.module.scss';
 import user from '../../assets/img/user.png';
-// import userLogin from '../../assets/img'
 import emptyBasket from '../../assets/img/emptyBasket.png';
 import activeBasket from '../../assets/img/activeBasket.png';
 
