@@ -32,6 +32,7 @@ const SectionHelp: FC<ISectionHelpProps> = ({
 								changeVisible={changeVisible}
 							/>
 						}
+						return null;
 					})
 				}
 			</div>

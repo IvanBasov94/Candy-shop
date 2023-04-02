@@ -105,6 +105,7 @@ const AutorizationPage: FC = () => {
 				} else {
 					setErrorLogin('Пользователя с такими данными не существует');
 				};
+				return null;
 			});
 		} else {
 			setErrorLogin('Введите логин или пароль');

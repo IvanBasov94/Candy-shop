@@ -65,9 +65,9 @@ const Login: FC<ILoginProps> = ({
 					<p className={styles.text}>Запомнить меня</p>
 				</div>
 				<div className={styles.item}>
-					<a className={styles.link} href='#'>
+					<span className={styles.link}>
 						Забыли пароль?
-					</a>
+					</span>
 				</div>
 			</div>
 			<MyButton

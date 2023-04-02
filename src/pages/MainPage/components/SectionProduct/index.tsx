@@ -38,6 +38,7 @@ const SectionProduct: FC<ISectionProductProps> = ({
 									category={category}
 								/>
 							}
+							return null;
 						})
 				}
 			</div>

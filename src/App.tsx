@@ -42,19 +42,29 @@ const App: FC = () => {
 	const [successLogin, setSuccessLogin] = useState<boolean>(false);
 	const [orderProcess, setOrderProcess] = useState<boolean>(false);
 
-	const localData = [basketProducts, successLogin];
-
 	useEffect(() => {
-		const localData = localStorage.getItem('localStorageData');
-		const data = localData ? JSON.parse(localData) : [];
-		setBasketProducts(data[0]);
-		setSuccessLogin(data[1]);
+		const localDataBasketProducts = localStorage.getItem('basketProducts');
+		const data = localDataBasketProducts ?
+			JSON.parse(localDataBasketProducts) : [];
+		setBasketProducts(data);
 	}, []);
 
 	useEffect(() => {
-		localStorage.setItem('localStorageData',
-			JSON.stringify(localData));
-	}, [localData]);
+		const localDataSuccessLogin = localStorage.getItem('successLogin');
+		const data = localDataSuccessLogin ?
+			JSON.parse(localDataSuccessLogin) : false;
+		setSuccessLogin(data);
+	}, []);
+
+	useEffect(() => {
+		localStorage.setItem('basketProducts',
+			JSON.stringify(basketProducts));
+	}, [basketProducts]);
+
+	useEffect(() => {
+		localStorage.setItem('successLogin',
+			JSON.stringify(successLogin));
+	}, [successLogin]);
 
 	const deleteProduct = (id: number) => {
 		setBasketProducts(basketProducts
