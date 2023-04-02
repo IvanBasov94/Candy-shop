@@ -6,21 +6,20 @@
 }
 
 .product {
-	margin-top: 15px;
 	display: flex;
 	justify-content: space-between;
 	align-items: top;
+	margin-top: 15px;
 }
 
 .image {
 	width: 50%;
-	width: 535px;
 
 	img {
 		width: 535px;
 		height: 594px;
-		border-radius: 20px;
 
+		border-radius: 20px;
 		object-fit: cover;
 	}
 }
@@ -47,9 +46,9 @@
 }
 
 .description {
+	padding-bottom: 30px;
+
 	font-size: 22px;
 	font-weight: 300;
 	line-height: 1.2;
-
-	padding-bottom: 30px;
 }

@@ -19,6 +19,21 @@ export interface IBasketProduct extends IProduct {
 	count: number,
 };
 
+export interface IBasketProductsContext {
+	basketProducts: IBasketProduct[],
+	deleteProduct: (id: number) => void,
+	activeBasketProduct: boolean,
+	incrementCountProuduct: (id: number) => void,
+	decrementCountProuduct: (id: number) => void,
+	handleOrderProcess: () => void,
+	orderProcess: boolean,
+};
+
+export interface ILoginContext {
+	successLogin: boolean,
+	changeSuccessLogin: () => void,
+};
+
 export interface IInfoHelp {
 	id: number,
 	category: string,
@@ -27,7 +42,7 @@ export interface IInfoHelp {
 	visible: boolean,
 };
 
-export interface ITypeInput {
+export interface ITypeInputContactsPage {
 	id: number,
 	text: string,
 	type: string,

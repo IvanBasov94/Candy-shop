@@ -1,20 +1,14 @@
-import { FC, useState, useEffect } from "react";
+import { FC, useState, useEffect, useContext } from "react";
 
 import Login from "./components/Login";
 import Registration from "./components/Registration";
 
-import styles from './AutorizationPage.module.scss';
 import { IUser } from "../../types/types";
+import { LoginContext } from "../../App";
 
-interface IAutorizationPageProps {
-	successLogin: boolean,
-	changeSuccessLogin: () => void,
-};
+import styles from './AutorizationPage.module.scss';
 
-const AutorizationPage: FC<IAutorizationPageProps> = ({
-	successLogin,
-	changeSuccessLogin,
-}) => {
+const AutorizationPage: FC = () => {
 
 	const [users, setUsers] = useState<IUser[]>([]);
 	const [newUser, setNewUser] = useState<IUser>({
@@ -30,6 +24,19 @@ const AutorizationPage: FC<IAutorizationPageProps> = ({
 	const [errorReg, setErrorReg] = useState<string>('');
 	const [errorLogin, setErrorLogin] = useState<string>('');
 	const [visibleLogin, setVisibleLogin] = useState<boolean>(false);
+
+	const loginContext = useContext(LoginContext);
+
+	useEffect(() => {
+		const localData = localStorage.getItem('users');
+		const usersData = localData ? JSON.parse(localData) : [];
+		setUsers(usersData);
+	}, []);
+
+	useEffect(() => {
+		localStorage.setItem('users',
+			JSON.stringify(users));
+	}, [users]);
 
 	const addUsers = () => {
 		if (newUser.login.trim().length > 0 &&
@@ -66,7 +73,6 @@ const AutorizationPage: FC<IAutorizationPageProps> = ({
 		})
 	};
 
-
 	const changeLoginActualUser = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setActualUser({
 			...actualUser,
@@ -82,12 +88,13 @@ const AutorizationPage: FC<IAutorizationPageProps> = ({
 	};
 
 	const handleLogin = () => {
+		if (loginContext.successLogin) return loginContext.changeSuccessLogin();
 		if (actualUser.login.trim().length > 0 &&
 			actualUser.password.trim().length > 0) {
 			users.map(user => {
 				if (user.login === actualUser.login &&
 					user.password === actualUser.password) {
-					changeSuccessLogin()
+					loginContext.changeSuccessLogin()
 					setVisibleLogin(true);
 					setErrorLogin('');
 					setActualUser({
@@ -108,8 +115,7 @@ const AutorizationPage: FC<IAutorizationPageProps> = ({
 		setTimeout(() => {
 			setVisibleLogin(false);
 		}, 2000);
-	}, [successLogin]);
-
+	}, [loginContext.successLogin]);
 
 	return (
 		<main className={styles.main}>

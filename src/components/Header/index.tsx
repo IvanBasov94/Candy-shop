@@ -6,15 +6,18 @@ import user from '../../assets/img/user.png';
 import emptyBasket from '../../assets/img/emptyBasket.png';
 import activeBasket from '../../assets/img/activeBasket.png';
 
+
 interface IHeaderProps {
 	activeBasketProduct: boolean,
 	successLogin: boolean,
 };
 
+
 const Header: FC<IHeaderProps> = ({
 	activeBasketProduct,
 	successLogin
 }) => {
+
 	return (
 		<header className={styles.header}>
 			<div className={styles.container}>

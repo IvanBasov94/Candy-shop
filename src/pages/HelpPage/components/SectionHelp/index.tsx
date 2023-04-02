@@ -1,9 +1,11 @@
 import { FC } from 'react';
 
 import Info from '../Info';
+
 import { IInfoHelp } from '../../../../types/types';
 
 import styles from './SectionHelp.module.scss';
+
 
 interface ISectionHelpProps {
 	infoHelp: IInfoHelp[],

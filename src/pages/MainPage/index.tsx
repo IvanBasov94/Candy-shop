@@ -4,15 +4,10 @@ import IntroMain from "./components/IntroMain";
 import SectionProduct from "./components/SectionProduct";
 import Search from './components/Search';
 
-import { IProduct } from "../../types/types";
 import styles from './MainPage.module.scss';
 
-interface IMainPageProps {
-	products: IProduct[],
-};
 
-
-const MainPage: FC<IMainPageProps> = ({ products }) => {
+const MainPage: FC = () => {
 
 	const [searchText, setSearchText] = useState<string>('');
 
@@ -29,12 +24,10 @@ const MainPage: FC<IMainPageProps> = ({ products }) => {
 					changeSearchText={changeSearchText}
 				/>
 				<SectionProduct
-					products={products}
 					category='Торты'
 					searchText={searchText}
 				/>
 				<SectionProduct
-					products={products}
 					category='Десерты'
 					searchText={searchText}
 				/>

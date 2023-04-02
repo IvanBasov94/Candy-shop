@@ -3,6 +3,7 @@ import { FC } from "react";
 import styles from './AboutPage.module.scss';
 import sweetsAbout from '../../assets/img/sweetsAbout.jpg';
 
+
 const AboutPage: FC = () => {
 	return (
 		<main className={styles.main}>

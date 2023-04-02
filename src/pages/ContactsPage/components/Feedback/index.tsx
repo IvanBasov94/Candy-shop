@@ -4,6 +4,7 @@ import Form from '../Form';
 
 import styles from './Feedback.module.scss';
 
+
 const Feedback: FC = () => {
 	return (
 		<div className={styles.content}>

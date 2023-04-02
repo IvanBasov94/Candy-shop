@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import styles from './IntroMain.module.scss';
 
+
 const IntroMain: FC = () => {
 	return (
 		<div className={styles.intro}>

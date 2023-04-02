@@ -2,6 +2,7 @@
 
 .footer {
 	margin-top: 320px;
+
 	background-color: $colorBlack;
 	color: $colorWhite;
 }
@@ -57,15 +58,15 @@
 }
 
 .nav {
-	padding: 75px 0;
 	display: flex;
+	padding: 75px 0;
 	align-items: center;
 	justify-content: center;
 }
 
 .navLink {
-	text-align: center;
 	margin-left: 68px;
+	text-align: center;
 
 	font-size: 24px;
 	font-weight: 300;

@@ -5,6 +5,7 @@ import MyButton from "../../components/UI/MyButton";
 
 import { IInfoHelp } from "../../types/types";
 import { initInfoHelp } from "../../assets/data/infoHelp";
+
 import styles from './HelpPage.module.scss';
 
 

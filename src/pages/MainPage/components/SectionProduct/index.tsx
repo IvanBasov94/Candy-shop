@@ -1,28 +1,30 @@
-import { FC } from 'react';
+import { FC, useContext } from 'react';
 
 import Product from '../Product';
-import { IProduct } from '../../../../types/types';
+import { ProductsContext } from '../../../../App';
 
 import styles from './SectionProduct.module.scss';
 
+
 interface ISectionProductProps {
-	products: IProduct[],
 	searchText: string,
 	category: string,
 };
 
+
 const SectionProduct: FC<ISectionProductProps> = ({
-	products,
 	searchText,
 	category,
 }) => {
+
+	const productsContext = useContext(ProductsContext);
 
 	return (
 		<section className={styles.section}>
 			<h2 className={styles.title}>{category}</h2>
 			<div className={styles.products}>
 				{
-					products
+					productsContext
 						.filter(product => (
 							product.title
 								.toLowerCase()

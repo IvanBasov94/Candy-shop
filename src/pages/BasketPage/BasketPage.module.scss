@@ -16,10 +16,11 @@
 
 .text {
 	display: inline-block;
+	padding-right: 15px;
+
 	font-size: 22px;
 	font-weight: 400;
 	line-height: 1.2;
-	padding-right: 15px;
 }
 
 .successOrder {
@@ -27,9 +28,9 @@
 }
 
 .summary {
+	padding-bottom: 25px;
+
 	font-size: 30px;
 	font-weight: 600;
 	line-height: 1.2;
-
-	padding-bottom: 25px;
 }

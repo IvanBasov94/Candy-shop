@@ -1,6 +1,6 @@
-import { ITypeInput } from "../../types/types";
+import { ITypeInputContactsPage } from "../../types/types";
 
-export const typesInput: ITypeInput[] = [
+export const typesInput: ITypeInputContactsPage[] = [
 	{
 		id: 1,
 		text: 'Email',

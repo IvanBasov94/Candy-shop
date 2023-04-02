@@ -1,9 +1,13 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
+
 import MyButton from "../../../../components/UI/MyButton";
 import MyInput from "../../../../components/UI/MyInput";
 
-import styles from './Login.module.scss';
 import { IUser } from "../../../../types/types";
+import { LoginContext } from "../../../../App";
+
+import styles from './Login.module.scss';
+
 
 interface ILoginProps {
 	actualUser: IUser,
@@ -13,6 +17,7 @@ interface ILoginProps {
 	errorLogin: string,
 };
 
+
 const Login: FC<ILoginProps> = ({
 	actualUser,
 	changeLoginActualUser,
@@ -20,6 +25,9 @@ const Login: FC<ILoginProps> = ({
 	handleLogin,
 	errorLogin,
 }) => {
+
+	const loginContext = useContext(LoginContext);
+
 	return (
 		<section className={styles.login}>
 			<h2 className={errorLogin ? styles.titleError : styles.title}>
@@ -35,6 +43,7 @@ const Login: FC<ILoginProps> = ({
 				color='white'
 				name='login'
 				value={actualUser.login}
+				disabled={loginContext.successLogin ? true : false}
 				onChange={(event) => changeLoginActualUser(event)}
 			/>
 			<MyInput
@@ -44,6 +53,7 @@ const Login: FC<ILoginProps> = ({
 				color='white'
 				name='password'
 				value={actualUser.password}
+				disabled={loginContext.successLogin ? true : false}
 				onChange={(event) => changePasswordActualUser(event)}
 			/>
 			<div className={styles.options}>
@@ -64,7 +74,7 @@ const Login: FC<ILoginProps> = ({
 				type='button'
 				size='large'
 				color='pink'
-				text='Войти'
+				text={loginContext.successLogin ? 'Выйти' : 'Войти'}
 				onClick={() => handleLogin()}
 			/>
 		</section >

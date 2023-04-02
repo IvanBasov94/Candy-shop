@@ -3,13 +3,15 @@ import { FC } from 'react';
 import MyInput from '../../../../components/UI/MyInput';
 import MyButton from '../../../../components/UI/MyButton';
 
-import styles from './Form.module.scss';
 import { typesInput } from '../../../../assets/data/typesInput';
+
+import styles from './Form.module.scss';
+
 
 const Form: FC = () => {
 	return (
 		<div className={styles.form}>
-			<form action='#' method='post' >
+			<form>
 				{
 					typesInput.map(type => (
 						<MyInput
@@ -28,7 +30,7 @@ const Form: FC = () => {
 				/>
 				<div className={styles.submitBtn}>
 					<MyButton
-						type='submit'
+						type='reset'
 						size='large'
 						color='pink'
 						text='Отправить сообщение'

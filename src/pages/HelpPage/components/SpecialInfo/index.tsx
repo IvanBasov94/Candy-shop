@@ -2,7 +2,9 @@ import { FC } from 'react';
 
 import styles from './SpecialInfo.module.scss';
 
+
 const SpecialInfo: FC = () => {
+
 	return (
 		<div className={styles.text}>
 			<p>

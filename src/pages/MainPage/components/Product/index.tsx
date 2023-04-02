@@ -5,10 +5,12 @@ import { IProduct } from '../../../../types/types';
 
 import styles from './Product.module.scss';
 
+
 interface IProductProps {
 	product: IProduct,
 	category: string,
 };
+
 
 const Product: FC<IProductProps> = ({ product, category }) => {
 

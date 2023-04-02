@@ -1,17 +1,16 @@
 @import '../../../styles/components/all';
 
 .btnBack {
-	position: relative;
 	display: block;
+	position: relative;
 	width: 87px;
 	height: 26px;
 
 	border: none;
 	background-color: transparent;
-
 	color: $colorBlack;
-	cursor: pointer;
 
+	cursor: pointer;
 	transition: all .2 linear;
 
 	&:hover {

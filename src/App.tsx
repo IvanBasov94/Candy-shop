@@ -14,6 +14,26 @@ import Footer from './components/Footer';
 
 import { products } from './assets/data/products';
 import { IBasketProduct } from './types/types';
+import { IProduct } from './types/types';
+import { IBasketProductsContext } from './types/types';
+import { ILoginContext } from './types/types';
+
+
+export const ProductsContext = createContext<IProduct[]>(products);
+export const LoginContext = createContext<ILoginContext>({
+	successLogin: false,
+	changeSuccessLogin: () => false,
+});
+export const BasketProductsContext =
+	createContext<IBasketProductsContext>({
+		basketProducts: [],
+		deleteProduct: () => { },
+		activeBasketProduct: false,
+		incrementCountProuduct: () => { },
+		decrementCountProuduct: () => { },
+		handleOrderProcess: () => false,
+		orderProcess: false,
+	});
 
 
 const App: FC = () => {
@@ -22,7 +42,19 @@ const App: FC = () => {
 	const [successLogin, setSuccessLogin] = useState<boolean>(false);
 	const [orderProcess, setOrderProcess] = useState<boolean>(false);
 
-	// const ProductsContext = createContext<IBasketProduct[]>([]);
+	const localData = [basketProducts, successLogin];
+
+	useEffect(() => {
+		const localData = localStorage.getItem('localStorageData');
+		const data = localData ? JSON.parse(localData) : [];
+		setBasketProducts(data[0]);
+		setSuccessLogin(data[1]);
+	}, []);
+
+	useEffect(() => {
+		localStorage.setItem('localStorageData',
+			JSON.stringify(localData));
+	}, [localData]);
 
 	const deleteProduct = (id: number) => {
 		setBasketProducts(basketProducts
@@ -41,7 +73,6 @@ const App: FC = () => {
 	const incrementCountProuduct = (id: number) => {
 		setBasketProducts(basketProducts.map(product => {
 			if (product.idBasketProduct !== id) return product;
-
 			return {
 				...product,
 				count: product.count + 1,
@@ -63,7 +94,7 @@ const App: FC = () => {
 	const activeBasketProduct = basketProducts.length > 0;
 
 	const changeSuccessLogin = () => {
-		setSuccessLogin(true);
+		setSuccessLogin(!successLogin);
 	};
 
 	const handleOrderProcess = () => {
@@ -84,33 +115,34 @@ const App: FC = () => {
 				successLogin={successLogin}
 			/>
 			<Routes>
-				{/* <ProductsContext.Provider value={products}>
-					<Route path='/' element={
-						<MainPage />
-					} />
-				</ProductsContext.Provider> */}
 				<Route path='/' element={
-					<MainPage products={products} />
+					<ProductsContext.Provider value={products}>
+						<MainPage />
+					</ProductsContext.Provider>
 				} />
 				<Route path='/help' element={<HelpPage />} />
 				<Route path='/about' element={<AboutPage />} />
 				<Route path='/contacts' element={<ContactsPage />} />
 				<Route path='/autorization' element={
-					<AutorizationPage
-						successLogin={successLogin}
-						changeSuccessLogin={changeSuccessLogin}
-					/>
+					<LoginContext.Provider value={{
+						successLogin,
+						changeSuccessLogin
+					}}>
+						<AutorizationPage />
+					</LoginContext.Provider>
 				} />
 				<Route path='/basket' element={
-					<BasketPage
-						basketProducts={basketProducts}
-						deleteProduct={deleteProduct}
-						activeBasketProduct={activeBasketProduct}
-						incrementCountProuduct={incrementCountProuduct}
-						decrementCountProuduct={decrementCountProuduct}
-						handleOrderProcess={handleOrderProcess}
-						orderProcess={orderProcess}
-					/>
+					<BasketProductsContext.Provider value={{
+						basketProducts,
+						deleteProduct,
+						activeBasketProduct,
+						incrementCountProuduct,
+						decrementCountProuduct,
+						handleOrderProcess,
+						orderProcess,
+					}}>
+						<BasketPage />
+					</BasketProductsContext.Provider>
 				} />
 				<Route path='/product/:id' element={
 					<ProductPage

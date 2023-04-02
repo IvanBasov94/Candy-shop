@@ -3,7 +3,6 @@
 
 .myBtn {
 	display: inline-block;
-	cursor: pointer;
 	text-align: center;
 	vertical-align: middle;
 
@@ -13,6 +12,7 @@
 	border: none;
 	border-radius: 20px;
 
+	cursor: pointer;
 	transition: opacity .2s linear;
 
 	&.pink {

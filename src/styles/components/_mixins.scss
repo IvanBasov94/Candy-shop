@@ -24,11 +24,11 @@
 }
 
 @mixin popup-text {
+	padding-bottom: 30px;
+	text-align: center;
+
 	font-size: 36px;
 	font-weight: 600;
 	line-height: 1.23;
 	color: $colorPink;
-
-	text-align: center;
-	padding-bottom: 30px;
 }

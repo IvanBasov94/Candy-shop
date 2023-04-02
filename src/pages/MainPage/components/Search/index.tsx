@@ -3,12 +3,18 @@ import { FC } from 'react';
 import styles from './SearchForm.module.scss';
 import search from '../../../../assets/img/search.png';
 
+
 interface ISearchFormProps {
 	searchText: string,
 	changeSearchText: (event: React.ChangeEvent<HTMLInputElement>) => void,
 }
 
-const SearchForm: FC<ISearchFormProps> = ({ searchText, changeSearchText }) => {
+
+const SearchForm: FC<ISearchFormProps> = ({
+	searchText,
+	changeSearchText
+}) => {
+
 	return (
 		<div className={styles.searchForm}>
 			<img

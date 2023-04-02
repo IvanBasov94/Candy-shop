@@ -33,14 +33,16 @@
 }
 
 .checkbox {
-	margin-left: 8px;
 	display: inline-block;
+	margin-left: 8px;
+
 	transform: scale(2);
 }
 
 .text {
-	padding-left: 20px;
 	display: inline-block;
+	padding-left: 20px;
+
 	font-size: 22px;
 	font-weight: 300;
 	line-height: 1.2;
@@ -65,8 +67,9 @@
 }
 
 .error {
+	padding-bottom: 10px;
+
 	font-size: 18px;
 	font-weight: 500;
 	color: $colorPink;
-	padding-bottom: 10px;
 }

@@ -8,6 +8,7 @@ import { products } from "../../assets/data/products";
 
 import styles from './ProductPage.module.scss';
 
+
 type Params = {
 	id: string;
 };
@@ -15,6 +16,7 @@ type Params = {
 interface IProductPageProps {
 	addBasketProduct: (id: number) => void,
 };
+
 
 const ProductPage: FC<IProductPageProps> = ({ addBasketProduct }) => {
 

@@ -3,8 +3,10 @@ import { FC } from 'react';
 import SpecialInfo from '../SpecialInfo';
 
 import { IInfoHelp } from '../../../../types/types';
+
 import styles from './Info.module.scss';
 import arrow from '../../../../assets/img/arrow.png';
+
 
 interface IInfoProps {
 	info: IInfoHelp,
@@ -12,7 +14,11 @@ interface IInfoProps {
 };
 
 
-const Info: FC<IInfoProps> = ({ info, changeVisible }) => {
+const Info: FC<IInfoProps> = ({
+	info,
+	changeVisible
+}) => {
+
 	return (
 		<article className={styles.info}>
 			<div className={styles.heading}>

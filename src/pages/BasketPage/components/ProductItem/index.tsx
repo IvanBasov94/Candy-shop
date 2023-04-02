@@ -1,24 +1,23 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
+
+import { IBasketProduct } from "../../../../types/types";
+import { BasketProductsContext } from "../../../../App";
 
 import styles from './ProductItem.module.scss';
-import { IBasketProduct } from "../../../../types/types";
 import crossDelete from '../../../../assets/img/crossDelete.png';
 import plusCount from '../../../../assets/img/plusCount.png';
 import minusCount from '../../../../assets/img/minusCount.png';
 
+
 interface IProductItemProps {
 	product: IBasketProduct,
-	deleteProduct: (id: number) => void,
-	incrementCountProuduct: (id: number) => void,
-	decrementCountProuduct: (id: number) => void,
 };
 
-const ProductItem: FC<IProductItemProps> = ({
-	product,
-	deleteProduct,
-	incrementCountProuduct,
-	decrementCountProuduct,
-}) => {
+
+const ProductItem: FC<IProductItemProps> = ({ product }) => {
+
+	const basketProductsContext = useContext(BasketProductsContext);
+
 	return (
 		<section className={styles.product}>
 			<div className={styles.item}>
@@ -46,7 +45,8 @@ const ProductItem: FC<IProductItemProps> = ({
 				<button
 					className={styles.btnCount}
 					onClick={() =>
-						decrementCountProuduct(product.idBasketProduct)}>
+						basketProductsContext
+							.decrementCountProuduct(product.idBasketProduct)}>
 					<img
 						className={`${styles.btnCountImg} ${styles.btnCircle}`}
 						src={minusCount}
@@ -57,7 +57,8 @@ const ProductItem: FC<IProductItemProps> = ({
 				<button
 					className={styles.btnCount}
 					onClick={() =>
-						incrementCountProuduct(product.idBasketProduct)}>
+						basketProductsContext
+							.incrementCountProuduct(product.idBasketProduct)}>
 					<img
 						className={styles.btnCountImg}
 						src={plusCount}
@@ -68,7 +69,8 @@ const ProductItem: FC<IProductItemProps> = ({
 			<div className={styles.item}>
 				<button
 					className={styles.btnDelete}
-					onClick={() => deleteProduct(product.idBasketProduct)}
+					onClick={() => basketProductsContext
+						.deleteProduct(product.idBasketProduct)}
 				>
 					<img
 						className={styles.btnDeleteImg}

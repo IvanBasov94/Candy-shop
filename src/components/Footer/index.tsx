@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { NavLink } from 'react-router-dom';
 
 import MyInput from "../UI/MyInput";
@@ -6,7 +6,19 @@ import MyButton from "../UI/MyButton";
 
 import styles from './Footer.module.scss';
 
+
 const Footer: FC = () => {
+
+	const [emailValue, setEmailValue] = useState<string>('');
+
+	const changeEmailValue = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setEmailValue(event.target.value);
+	};
+
+	const handleSubscribe = () => {
+		setEmailValue('');
+	};
+
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.containerFooter}>
@@ -16,19 +28,22 @@ const Footer: FC = () => {
 						Получите промокод на скидку 10%, подписавшись на нашу новостную рассылку. Мы изредка <br />
 						пишем о скидках, новинках и всяком таком.
 					</p>
-					<form action="#" method="post" className={styles.form}>
+					<form className={styles.form}>
 						<MyInput
 							text='Ваш email'
 							type='email'
 							size='large'
 							color='black'
 							name='email'
+							value={emailValue}
+							onChange={changeEmailValue}
 						/>
 						<MyButton
 							type='submit'
 							size='small'
 							color='white'
 							text='Подписаться'
+							onClick={handleSubscribe}
 						/>
 					</form>
 					<p className={styles.notice}>Нажимая кнопку выше, вы даёте согласие на обработку своих персональных данных и соглашаетесь с Условиями использования и Политикой конфиденциальности.</p>

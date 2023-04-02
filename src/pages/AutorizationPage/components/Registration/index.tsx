@@ -3,8 +3,10 @@ import React, { FC } from "react";
 import MyButton from "../../../../components/UI/MyButton";
 import MyInput from "../../../../components/UI/MyInput";
 
-import styles from './Registration.module.scss';
 import { IUser } from "../../../../types/types";
+
+import styles from './Registration.module.scss';
+
 
 interface IRegistrationProps {
 	addUsers: () => void,
@@ -12,7 +14,8 @@ interface IRegistrationProps {
 	changePasswordNewUser: (event: React.ChangeEvent<HTMLInputElement>) => void,
 	errorReg: string,
 	newUser: IUser,
-}
+};
+
 
 const Registration: FC<IRegistrationProps> = ({
 	addUsers,
@@ -21,6 +24,7 @@ const Registration: FC<IRegistrationProps> = ({
 	errorReg,
 	newUser,
 }) => {
+
 	return (
 		<section className={styles.registration}>
 			<h2 className={errorReg ? styles.titleError : styles.title}>

@@ -1,35 +1,24 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 
 import ProductItem from "../ProductItem";
 
-import { IBasketProduct } from "../../../../types/types";
+import { BasketProductsContext } from "../../../../App";
 
 
-interface IProductListProps {
-	basketProducts: IBasketProduct[],
-	deleteProduct: (id: number) => void,
-	incrementCountProuduct: (id: number) => void,
-	decrementCountProuduct: (id: number) => void,
-};
+const ProductList: FC = () => {
 
-const ProductList: FC<IProductListProps> = ({
-	basketProducts,
-	deleteProduct,
-	incrementCountProuduct,
-	decrementCountProuduct,
-}) => {
+	const basketProductsContext = useContext(BasketProductsContext);
+
 	return (
 		<div>
 			{
-				basketProducts.map(product => (
-					<ProductItem
-						key={product.idBasketProduct}
-						product={product}
-						deleteProduct={deleteProduct}
-						incrementCountProuduct={incrementCountProuduct}
-						decrementCountProuduct={decrementCountProuduct}
-					/>
-				))
+				basketProductsContext.basketProducts
+					.map(product => (
+						<ProductItem
+							key={product.idBasketProduct}
+							product={product}
+						/>
+					))
 			}
 		</div>
 	);

@@ -3,6 +3,7 @@ import { FC } from 'react';
 import styles from './IntroContacts.module.scss';
 import sweetsContacts from '../../../../assets/img/sweetsContacts.jpg';
 
+
 const IntroContacts: FC = () => {
 	return (
 		<div className={styles.intro}>
