@@ -3,7 +3,7 @@
 .title {
 	@include h2-title;
 
-	margin-bottom: 119px;
+	margin-bottom: 60px;
 }
 
 .block {
@@ -13,21 +13,21 @@
 
 .image {
 	display: block;
-	width: 537px;
-	height: 542px;
-	margin-right: 41px;
+	width: 387px;
+	height: 390px;
+	margin-right: 33px;
 
 	object-fit: cover;
 }
 
 .text {
-	padding-top: 30px;
+	padding-top: 24px;
 
-	font-size: 24px;
+	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.2;
 
 	p {
-		margin-bottom: 50px;
+		margin-bottom: 20px;
 	}
 }

@@ -3,23 +3,24 @@
 .searchForm {
 	position: relative;
 	width: 100%;
-	height: 50px;
+	height: 40px;
 
 	background-color: $colorGray;
-	border-radius: 15px;
+	border-radius: 12px;
 }
 
 .input {
 	position: absolute;
-	width: 100%;
-	height: 50px;
-	left: 52px;
+	width: 1000px;
+	height: 40px;
+	left: 42px;
 
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 400;
 
 	background-color: $colorGray;
 	border: none;
+	border-radius: 12px;
 
 
 	&::placeholder {
@@ -38,9 +39,9 @@
 
 .icon {
 	position: absolute;
-	width: 20px;
-	height: 20px;
+	width: 16px;
+	height: 16px;
 
-	top: 15px;
-	left: 16px;
+	top: 12px;
+	left: 13px;
 }

@@ -3,13 +3,13 @@
 .title {
 	@include h2-title;
 
-	margin-bottom: 27px;
+	margin-bottom: 22px;
 }
 
 .text {
-	padding-bottom: 82px;
+	padding-bottom: 66px;
 
-	font-size: 22px;
+	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.2;
 }
@@ -19,18 +19,18 @@
 }
 
 .phoneBlock {
-	width: 483px;
+	width: 386px;
 }
 
 .phoneItem {
-	padding-bottom: 46px;
+	padding-bottom: 36px;
 }
 
 .phoneLink {
 	display: block;
-	padding-bottom: 14px;
+	padding-bottom: 12px;
 
-	font-size: 36px;
+	font-size: 24px;
 	font-weight: 500;
 	line-height: 1.2;
 	color: $colorBlack;
@@ -48,7 +48,7 @@
 }
 
 .phoneText {
-	font-size: 22px;
+	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.2;
 }

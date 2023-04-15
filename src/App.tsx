@@ -108,8 +108,10 @@ const App: FC = () => {
 	};
 
 	const handleOrderProcess = () => {
-		setOrderProcess(true);
-		setBasketProducts([]);
+		if (basketProducts.length > 0) {
+			setOrderProcess(true);
+			setBasketProducts([]);
+		}
 	};
 
 	useEffect(() => {

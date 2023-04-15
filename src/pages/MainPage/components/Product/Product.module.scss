@@ -3,41 +3,36 @@
 .product {
 	position: relative;
 	width: 33%;
-	max-width: 330px;
-	height: 490px;
-	margin-left: 75px;
-	margin-bottom: 70px;
-
-	&:nth-child(3n + 1) {
-		margin-left: 0;
-	}
+	max-width: 264px;
+	height: 392px;
+	margin-bottom: 26px;
 }
 
 .image {
 	display: block;
-	width: 330px;
-	height: 330px;
+	width: 264px;
+	height: 264px;
 
 	object-fit: cover;
-	border-radius: 20px;
+	border-radius: 16px;
 
 	cursor: pointer;
 }
 
 
 .title {
-	margin: 32px 0;
+	margin: 20px 0 0;
 
-	font-size: 28px;
+	font-size: 22px;
 	font-weight: 400;
 	line-height: 1.2;
 }
 
 .options {
 	position: absolute;
-	top: 460px;
+	top: 348px;
 
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 600;
 	line-height: 1.2;
 }

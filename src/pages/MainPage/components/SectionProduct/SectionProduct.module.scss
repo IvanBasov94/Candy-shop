@@ -1,12 +1,13 @@
 @import '../../../../styles/components/all';
 
 .section {
-	padding-top: 62px;
+	padding-top: 50px;
 }
 
 .products {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	align-items: center;
 
 	color: $colorBlack;
@@ -15,5 +16,5 @@
 .title {
 	@include h2-title;
 
-	margin-bottom: 40px;
+	margin-bottom: 32px;
 }

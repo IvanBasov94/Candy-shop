@@ -1,7 +1,7 @@
 @import '../../styles/components/all';
 
 .footer {
-	margin-top: 320px;
+	margin-top: 100px;
 
 	background-color: $colorBlack;
 	color: $colorWhite;
@@ -14,13 +14,13 @@
 }
 
 .inner {
-	padding: 120px 0;
-	height: 774px;
+	padding: 50px 0 0;
+	height: 620px;
 	text-align: center;
 }
 
 .title {
-	font-size: 38px;
+	font-size: 30px;
 	font-weight: 600;
 	line-height: 1.2;
 	color: $colorWhite;
@@ -28,9 +28,9 @@
 
 .paragraph {
 	display: block;
-	padding: 40px 0;
+	padding: 32px 0;
 
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: 400;
 	line-height: 1.2;
 	color: $colorWhite;
@@ -42,16 +42,16 @@
 }
 
 .notice {
-	padding-top: 31px;
+	padding-top: 25px;
 
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 1.2;
-	opacity: .4;
+	opacity: 0.4;
 }
 
 .logo {
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 800;
 	line-height: 1.2;
 	color: $colorWhite;
@@ -59,16 +59,16 @@
 
 .nav {
 	display: flex;
-	padding: 75px 0;
+	padding: 30px 0;
 	align-items: center;
 	justify-content: center;
 }
 
 .navLink {
-	margin-left: 68px;
+	margin-left: 54px;
 	text-align: center;
 
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 300;
 	line-height: 1.2;
 	color: $colorWhite;

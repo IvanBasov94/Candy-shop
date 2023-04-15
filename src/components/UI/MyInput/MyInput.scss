@@ -3,8 +3,8 @@
 
 .myInput {
 	display: inline-block;
-	height: 81px;
-	padding: 0 20px;
+	height: 65px;
+	padding: 0 16px;
 
 	@include input-params;
 
@@ -14,22 +14,22 @@
 	}
 
 	&.small {
-		width: 270px;
-		height: 54px;
+		width: 216px;
+		height: 43px;
 	}
 
 	&.medium {
-		width: 398px;
+		width: 318px;
 	}
 
 	&.large {
-		width: 483px;
-		margin-bottom: 20px;
+		width: 386px;
+		margin-bottom: 16px;
 	}
 
 	&.extraLarge {
 		width: 618px;
-		margin-bottom: 15px;
+		margin-bottom: 12px;
 	}
 
 	&.white {

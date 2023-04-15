@@ -2,7 +2,7 @@
 
 .content {
 	display: flex;
-	padding-bottom: 90px;
+	padding-bottom: 40px;
 }
 
 .introItem {
@@ -12,16 +12,16 @@
 .title {
 	@include h2-title;
 
-	margin-bottom: 111px;
+	margin-bottom: 89px;
 }
 
 .text {
-	font-size: 22px;
+	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.2;
 }
 
 .image {
-	width: 400px;
-	height: 429px;
+	width: 350px;
+	height: 343px;
 }

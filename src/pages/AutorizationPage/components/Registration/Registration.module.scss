@@ -3,13 +3,13 @@
 .title {
 	@include h2-title;
 
-	padding-bottom: 46px;
+	padding-bottom: 36px;
 }
 
 .titleError {
 	@include h2-title;
 
-	padding-bottom: 15px;
+	padding-bottom: 12px;
 }
 
 .registration {
@@ -17,17 +17,17 @@
 }
 
 .text {
-	padding-bottom: 15px;
+	padding-bottom: 12px;
 
-	font-size: 22px;
+	font-size: 16px;
 	font-weight: 300;
 	line-height: 1.2;
 }
 
 .error {
-	padding-bottom: 10px;
+	padding-bottom: 8px;
 
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: 500;
 	color: $colorPink;
 }

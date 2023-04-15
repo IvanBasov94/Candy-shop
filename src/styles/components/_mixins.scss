@@ -1,9 +1,9 @@
 @import '../components/colors';
 
 @mixin h2-title {
-	font-size: 48px;
+	font-size: 30px;
 	font-weight: 600;
-	line-height: 1.23;
+	line-height: 1.2;
 	color: $colorBlack;
 }
 
@@ -12,23 +12,23 @@
 }
 
 @mixin input-params {
-	font-size: 22px;
+	font-size: 18px;
 	font-weight: 300;
 	line-height: 1.2;
 
 	border: none;
-	border-radius: 20px;
+	border-radius: 16px;
 	background: transparent;
 
 	transition: all .2 linear;
 }
 
 @mixin popup-text {
-	padding-bottom: 30px;
+	padding-bottom: 24px;
 	text-align: center;
 
-	font-size: 36px;
+	font-size: 28px;
 	font-weight: 600;
-	line-height: 1.23;
+	line-height: 1.2;
 	color: $colorPink;
 }
