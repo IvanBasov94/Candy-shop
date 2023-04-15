@@ -31,11 +31,15 @@ const ProductItem: FC<IProductItemProps> = ({ product }) => {
 				<h4 className={styles.title}>{product.title}</h4>
 				<ul className={styles.infoProduct}>
 					<li>Покрытие кремом: {product.creamСoverage}</li>
-					<li>Подтёки: {product.defect}</li>
+					<li>Подтёки: {product.smudges}</li>
 					<li>Дата готовности: {product.date}</li>
 					<li>Цвет крема: {product.creamColor}</li>
 					<li>Ягодное украшение: {product.berryDecoration}</li>
-					<li>Вес: {product.weight}</li>
+					{
+						product.category === 'Торты' ?
+							<li>Вес: {product.weight}</li> :
+							<li>Количество: {product.amount}</li>
+					}
 				</ul>
 			</div>
 			<div className={styles.item}>
@@ -79,7 +83,7 @@ const ProductItem: FC<IProductItemProps> = ({ product }) => {
 					/>
 				</button>
 			</div>
-		</section>
+		</section >
 	);
 };
 

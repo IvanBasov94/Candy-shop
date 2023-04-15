@@ -46,9 +46,13 @@ const ProductPage: FC<IProductPageProps> = ({ addBasketProduct }) => {
 									`${product.amount} шт.`
 							}
 						</div>
-						<p className={styles.description}>
-							{product.desctiption}
-						</p>
+						<div className={styles.description}>
+							{
+								product.desctiption.map((item) => (
+									<p> {item}</p>
+								))
+							}
+						</div>
 						<NavLink to={'/'}>
 							<MyButton
 								type='button'

@@ -21,7 +21,10 @@ const Info: FC<IInfoProps> = ({
 
 	return (
 		<article className={styles.info}>
-			<div className={styles.heading}>
+			<div
+				className={styles.heading}
+				onClick={() => changeVisible(info.id)}
+			>
 				<h4 className={styles.title}>{info.title}</h4>
 				<img
 					className={
@@ -31,7 +34,6 @@ const Info: FC<IInfoProps> = ({
 					}
 					src={arrow}
 					alt="Arrow"
-					onClick={() => changeVisible(info.id)}
 				/>
 			</div>
 			{
